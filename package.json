@@ -1,0 +1,59 @@
+{
+  "name": "@leyyo/core",
+  "version": "1.0.23",
+  "description": "Core component for JavaScript/TypeScript",
+  "keywords": [
+    "core",
+    "type"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leyyonet/core.git"
+  },
+  "bugs": {
+    "email": "mustafayelmer@gmail.com",
+    "url": "https://github.com/leyyonet/core/issues"
+  },
+  "homepage": "https://github.com/leyyonet/core#readme",
+  "author": {
+    "name": "Mustafa Yelmer",
+    "email": "mustafayelmer@gmail.com"
+  },
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "clear": "rimraf dist",
+    "lint": "eslint src/**/*.ts",
+    "asset": "node -r ts-node/register commands/assets.ts",
+    "build": "npm run clear && tsc && npm run asset",
+    "test": "jest --config=jest.json",
+    "test:watch": "jest --watch --config=jest.json",
+    "test:coverage": "jest --config=jest.json --coverage --coverageDirectory=coverage",
+    "~publish": "npm run build && npm publish -access=public"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.27.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-jsdoc": "^50.6.9",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.3.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@leyyo/common": "file:../common",
+    "reflect-metadata": "^0.2.2"
+  }
+}
