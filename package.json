@@ -1,26 +1,25 @@
 {
-  "name": "@leyyo/core",
-  "version": "1.0.23",
+  "name": "@leyyo/call",
+  "version": "1.0.0",
   "description": "Core component for JavaScript/TypeScript",
   "keywords": [
-    "core",
-    "type"
+    "Call"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leyyonet/core.git"
+    "url": "git+https://github.com/leyyonet/call.git"
   },
   "bugs": {
     "email": "mustafayelmer@gmail.com",
-    "url": "https://github.com/leyyonet/core/issues"
+    "url": "https://github.com/leyyonet/call/issues"
   },
-  "homepage": "https://github.com/leyyonet/core#readme",
+  "homepage": "https://github.com/leyyonet/call#readme",
   "author": {
     "name": "Mustafa Yelmer",
     "email": "mustafayelmer@gmail.com"
   },
   "main": "dist/index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "clear": "rimraf dist",
     "lint": "eslint src/**/*.ts",
@@ -54,6 +53,9 @@
   },
   "dependencies": {
     "@leyyo/common": "file:../common",
-    "reflect-metadata": "^0.2.2"
+    "@leyyo/core": "file:../core",
+    "@leyyo/http": "file:../http",
+    "@leyyo/error-enveloper": "^1.0.2",
+    "@leyyo/scalar": "file:../scalar"
   }
 }
