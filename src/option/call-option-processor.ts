@@ -26,7 +26,7 @@ class CallOptionProcessor implements CallOptionProcessorLike, CallOptionProcesso
     private readonly conditionMap: Map<string, OptKeyConditionPro>;
 
     constructor() {
-        this.conditionMap = $repo.newMap($descriptor.sym(FQN_PCK, 'conditions'));
+        this.conditionMap = $repo.newMap(FQN_PCK, 'conditions');
     }
 
     read<

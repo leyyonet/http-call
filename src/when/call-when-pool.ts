@@ -8,7 +8,7 @@ class CallWhenPool implements CallWhenPoolLike {
     private readonly _map: Map<string, CallWhen>;
 
     constructor() {
-        this._map = $repo.newMap($descriptor.sym(FQN_PCK, `whenPool`));
+        this._map = $repo.newMap(FQN_PCK, `whenPool`);
     }
 
     add(name: string, fn: CallWhen): void {

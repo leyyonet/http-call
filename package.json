@@ -1,5 +1,5 @@
 {
-  "name": "@leyyo/call",
+  "name": "@leyyo/http-call",
   "version": "1.0.0",
   "description": "Core component for JavaScript/TypeScript",
   "keywords": [
@@ -7,13 +7,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leyyonet/call.git"
+    "url": "git+https://github.com/leyyonet/http-call.git"
   },
   "bugs": {
     "email": "mustafayelmer@gmail.com",
-    "url": "https://github.com/leyyonet/call/issues"
+    "url": "https://github.com/leyyonet/http-call/issues"
   },
-  "homepage": "https://github.com/leyyonet/call#readme",
+  "homepage": "https://github.com/leyyonet/http-call#readme",
   "author": {
     "name": "Mustafa Yelmer",
     "email": "mustafayelmer@gmail.com"
@@ -54,6 +54,7 @@
   "dependencies": {
     "@leyyo/common": "file:../common",
     "@leyyo/core": "file:../core",
+    "@leyyo/injection": "file:../injection",
     "@leyyo/http": "file:../http",
     "@leyyo/error-enveloper": "^1.0.2",
     "@leyyo/scalar": "file:../scalar"
