@@ -1,7 +1,7 @@
 import {DecoInstanceLike, footprint, Fqn, fqnHandler} from "@leyyo/core";
 import {$descriptor, $dev, $is, ClassLike, Func, OneOrMore, Wrap, WrapLike} from "@leyyo/common";
 import {arrayUtils} from "@leyyo/scalar";
-import {FQN_PCK} from "../internal";
+import {FQN} from "../internal";
 import {CallParamType, CallParamTypeItems} from "../literals";
 import {
     CallGetTypesResult,
@@ -13,7 +13,7 @@ import {
 } from "./index-types";
 import {httpSigner} from "@leyyo/http";
 
-@Fqn(FQN_PCK)
+@Fqn(FQN)
 class CallParamProcessor implements CallParamProcessorLike, CallParamProcessorSecure {
 
     constructor() {

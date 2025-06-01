@@ -1,14 +1,14 @@
-import {$assert, $descriptor, $dev, $repo} from "@leyyo/common";
+import {$assert, $dev, $repo} from "@leyyo/common";
 import {Fqn} from "@leyyo/core";
 import {CallWhen, CallWhenPoolLike} from "./index-types";
-import {FQN_PCK} from "../internal";
+import {FQN} from "../internal";
 
-@Fqn(FQN_PCK)
+@Fqn(FQN)
 class CallWhenPool implements CallWhenPoolLike {
     private readonly _map: Map<string, CallWhen>;
 
     constructor() {
-        this._map = $repo.newMap(FQN_PCK, `whenPool`);
+        this._map = $repo.newMap(FQN, `whenPool`);
     }
 
     add(name: string, fn: CallWhen): void {

@@ -1,4 +1,4 @@
-import {$assert, $descriptor, $dev, $is, $repo, OneOrMore} from "@leyyo/common";
+import {$assert, $dev, $is, $repo, OneOrMore} from "@leyyo/common";
 import {DecoInstanceLike, footprint, Fqn} from "@leyyo/core";
 import {
     CallOpt,
@@ -12,11 +12,11 @@ import {
     OptKeyType
 } from "./index-types";
 import {callWhen, CallWhen, CallWhenPro} from "../when";
-import {FQN_PCK} from "../internal";
+import {FQN} from "../internal";
 import {CallParams} from "../param";
 import {httpSigner} from "@leyyo/http";
 
-Fqn(FQN_PCK)
+Fqn(FQN)
 class CallOptionProcessor implements CallOptionProcessorLike, CallOptionProcessorSecure {
     readonly $SCOPE_SELF: CallScopePro = 1;
     readonly $SCOPE_ARR_VAL: CallScopePro = 2;
@@ -26,7 +26,7 @@ class CallOptionProcessor implements CallOptionProcessorLike, CallOptionProcesso
     private readonly conditionMap: Map<string, OptKeyConditionPro>;
 
     constructor() {
-        this.conditionMap = $repo.newMap(FQN_PCK, 'conditions');
+        this.conditionMap = $repo.newMap(FQN, 'conditions');
     }
 
     read<

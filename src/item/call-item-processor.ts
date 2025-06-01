@@ -13,12 +13,12 @@ import {
 } from "./index-types";
 import {CallOptPro} from "../option";
 import {errorEnveloper} from "@leyyo/error-enveloper";
-import {FQN_PCK} from "../internal";
+import {FQN} from "../internal";
 import {Ctx} from "@leyyo/http";
 
-@Fqn(FQN_PCK)
+@Fqn(FQN)
 class CallItemProcessor implements CallItemProcessorLike, CallItemProcessorSecure {
-    readonly sym = $descriptor.sym(FQN_PCK, 'storage');
+    readonly sym = $descriptor.sym(FQN, 'storage');
     constructor() {
     }
 

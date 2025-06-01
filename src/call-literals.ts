@@ -1,9 +1,9 @@
 import {Fqn} from "@leyyo/core";
 import {Loader} from "@leyyo/injection";
-import {FQN_PCK} from "./internal";
+import {FQN} from "./internal";
 import {CallParamTypeItems} from "./literals";
 
 @Loader(CallParamTypeItems)
-@Fqn(FQN_PCK)
+@Fqn(FQN)
 export class CallLiterals {
 }
